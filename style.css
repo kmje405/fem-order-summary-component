@@ -15,7 +15,6 @@
   --c-black: hsl(0, 0%, 0%);
 }
 
-/* ================= GLOBAL STYLES ================= */
 @layer global {
   body {
     display: grid;
@@ -34,7 +33,6 @@
   }
 }
 
-/* ================= ORDER SUMMARY BLOCK ================= */
 @layer order-summary {
   .order-summary {
     margin: 1rem auto;
@@ -71,7 +69,6 @@
     line-height: 2;
   }
 
-  /* ================= PLAN BLOCK (nested inside order-summary) ================= */
   .order-summary__plan.plan {
     display: flex;
     align-items: center;
@@ -114,7 +111,6 @@
     }
   }
 
-  /* ================= ACTION BUTTONS ================= */
   .order-summary__actions {
     margin-top: 2rem;
   }
@@ -133,7 +129,7 @@
     color: var(--c-white);
     margin-bottom: 1.5rem;
     box-shadow: 0 1.5rem 1rem hsla(245, 75%, 52%, 15%);
-    transition: background-color 300ms ease-in-out; /* ✅ property + duration + easing */
+    transition: background-color 300ms ease-in-out;
   }
 
   footer {
@@ -142,9 +138,7 @@
 
   @media (min-width: calc(768 / 16 * 1rem)) {
     .order-summary__button--confirm:hover {
-      background-color: var(
-        --c-purple-500
-      ); /* ✅ the new value you want to animate to */
+      background-color: var(--c-purple-500);
     }
   }
 
