@@ -119,5 +119,4 @@ In future projects, I want to continue focusing on:
 ## Author
 
 - Website - [Kevin Jones-Eastland](https://eastlandjones.com/)
-- Frontend Mentor -
-  [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@kmje405](https://www.frontendmentor.io/profile/kmje405)
