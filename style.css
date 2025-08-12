@@ -19,8 +19,19 @@
   body {
     display: grid;
     background-color: var(--c-blue-100);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
     margin: 0 auto;
     font-family: sans-serif;
+    min-height: 100vh;
+  }
+
+  @media (min-width: calc(768 / 16 * 1rem)) {
+    body {
+      background-image: url("./images/pattern-background-desktop.svg");
+    }
   }
 
   p {
