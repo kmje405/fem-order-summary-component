@@ -1,0 +1,162 @@
+:root {
+  /* Blues */
+  --c-blue-50: hsl(225, 100%, 98%);
+  --c-blue-100: hsl(225, 100%, 94%);
+  --c-blue-150: hsl(224, 100%, 92%);
+  --c-blue-700: hsl(245, 75%, 52%);
+  --c-blue-950: hsl(223, 47%, 23%);
+  /* Purples */
+  --c-purple-500: hsl(245, 83%, 68%);
+  /* Grays */
+  --c-gray-600: hsl(224, 23%, 55%);
+  /* White */
+  --c-white: hsl(0, 100%, 100%);
+  /* Black */
+  --c-black: hsl(0, 0%, 0%);
+}
+
+/* ================= GLOBAL STYLES ================= */
+@layer global {
+  body {
+    display: grid;
+    background-color: var(--c-blue-100);
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+
+  p {
+    color: var(--c-gray-600);
+    font-family: sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* ================= ORDER SUMMARY BLOCK ================= */
+@layer order-summary {
+  .order-summary {
+    margin: 1rem auto;
+    max-width: calc(327 / 16 * 1rem);
+    border-radius: 2rem;
+    background-color: var(--c-white);
+    overflow: hidden;
+
+    @media (min-width: calc(768/16*1rem)) {
+      max-width: calc(450 / 16 * 1rem);
+      justify-items: center;
+    }
+  }
+
+  .order-summary__image {
+    max-width: 100%;
+    display: block;
+    overflow: clip;
+  }
+
+  .order-summary__content {
+    text-align: center;
+    max-width: calc(354 / 16 * 1rem);
+    padding: 1.5rem;
+  }
+
+  .order-summary__title {
+    font-size: calc(30 / 16 * 1rem);
+    padding: 0;
+    margin: 0;
+  }
+
+  .order-summary__description {
+    line-height: 2;
+  }
+
+  /* ================= PLAN BLOCK (nested inside order-summary) ================= */
+  .order-summary__plan.plan {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--c-blue-50);
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+
+  .plan__icon {
+    flex-shrink: 0;
+  }
+
+  .plan__details {
+    flex: 1;
+    text-align: left;
+  }
+
+  .plan__name {
+    font-weight: bold;
+    color: var(--c-blue-950);
+    margin: 0;
+  }
+
+  .plan__price {
+    margin: 0;
+    color: var(--c-gray-600);
+  }
+
+  .plan__change {
+    color: var(--c-blue-700);
+    font-weight: bold;
+    flex-shrink: 0;
+    transition: color 300ms ease-in-out;
+  }
+
+  @media (min-width: calc(768 / 16 * 1rem)) {
+    .plan__change:hover {
+      color: var(--c-purple-500);
+    }
+  }
+
+  /* ================= ACTION BUTTONS ================= */
+  .order-summary__actions {
+    margin-top: 2rem;
+  }
+
+  .order-summary__button {
+    display: block;
+    min-height: calc(50 / 16 * 1rem);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: calc(50 / 16 * 1rem);
+  }
+
+  .order-summary__button--confirm {
+    background-color: var(--c-blue-700);
+    color: var(--c-white);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1.5rem 1rem hsla(245, 75%, 52%, 15%);
+    transition: background-color 300ms ease-in-out; /* ✅ property + duration + easing */
+  }
+
+  footer {
+    margin: 1rem;
+  }
+
+  @media (min-width: calc(768 / 16 * 1rem)) {
+    .order-summary__button--confirm:hover {
+      background-color: var(
+        --c-purple-500
+      ); /* ✅ the new value you want to animate to */
+    }
+  }
+
+  .order-summary__button--cancel {
+    color: var(--c-gray-600);
+    background-color: transparent;
+    transition: color 300ms ease-in-out;
+  }
+
+  @media (min-width: calc(768 / 16 * 1rem)) {
+    .order-summary__button--cancel:hover {
+      color: var(--c-blue-950);
+    }
+  }
+}
