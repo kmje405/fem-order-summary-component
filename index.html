@@ -25,64 +25,92 @@
     </style>
   </head>
   <body>
-    <main>
-      <div class="order-summary">
+    <main role="main" aria-label="Order summary">
+      <article class="order-summary">
         <img
           class="order-summary__image"
-          src="/images/illustration-hero.svg"
-          alt="Illustration of music enjoyment"
+          src="./images/illustration-hero.svg"
+          alt="Person dancing with headphones, enjoying music"
         />
 
         <section class="order-summary__content">
-          <div class="order-summary__header">
+          <header class="order-summary__header">
             <h1 class="order-summary__title">Order Summary</h1>
             <p class="order-summary__description">
               You can now listen to millions of songs, audiobooks, and podcasts
               on any device anywhere you like!
             </p>
-          </div>
+          </header>
 
-          <div class="order-summary__plan plan">
+          <article
+            class="order-summary__plan plan"
+            role="region"
+            aria-labelledby="plan-heading"
+          >
             <img
               class="plan__icon"
-              src="/images/icon-music.svg"
-              alt="Music icon"
+              src="./images/icon-music.svg"
+              alt=""
               height="48"
               width="48"
+              role="presentation"
             />
             <div class="plan__details">
-              <h2 class="plan__name">Annual Plan</h2>
-              <p class="plan__price">$59.99/year</p>
+              <h2 id="plan-heading" class="plan__name">Annual Plan</h2>
+              <p class="plan__price">
+                <span class="sr-only">Price: </span>
+                <strong>$59.99/year</strong>
+              </p>
             </div>
-            <a href="#" class="plan__change">Change</a>
-          </div>
+            <button
+              type="button"
+              class="plan__change"
+              aria-label="Change annual plan"
+            >
+              Change
+            </button>
+          </article>
 
-          <div class="order-summary__actions">
-            <a
+          <div
+            class="order-summary__actions"
+            role="group"
+            aria-label="Order actions"
+          >
+            <button
+              type="button"
               class="order-summary__button order-summary__button--confirm"
-              href="#"
+              aria-describedby="order-summary__title"
             >
               Proceed to Payment
-            </a>
-            <a
+            </button>
+            <button
+              type="button"
               class="order-summary__button order-summary__button--cancel"
-              href="#"
+              aria-describedby="order-summary__title"
             >
               Cancel Order
-            </a>
+            </button>
           </div>
         </section>
-      </div>
-      <footer>
-        <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-          </a>
-          Coded by
-          <a href="https://eastlandjones.com/">Kevin Jones-Eastland</a>
-        </div>
-      </footer>
+      </article>
     </main>
+
+    <footer role="contentinfo">
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="https://eastlandjones.com/" rel="noopener"
+          >Kevin Jones-Eastland</a
+        >
+        .
+      </div>
+    </footer>
   </body>
 </html>
