@@ -55,6 +55,7 @@
 
     @media (min-width: calc(768/16*1rem)) {
       max-width: calc(450 / 16 * 1rem);
+      justify-items: center;
     }
   }
 
